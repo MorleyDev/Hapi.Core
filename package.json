@@ -1,0 +1,39 @@
+{
+  "name": "morleydev-hapi-core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "tsc -p . && cp package.json dist/main",
+    "watch": "tsc -p . --watch",
+    "test:spec": "node dist/main/test.js",
+    "test:e2e": "node dist/e2e/e2e.js",
+    "test": "npm run test:spec && npm run test:e2e"
+  },
+  "author": "Jason Morley (morleydev.co.uk@gmail.com)",
+  "license": "ISC",
+  "dependencies": {
+    "@types/config": "^0.0.32",
+    "@types/hapi": "^16.1.7",
+    "@types/immutable": "^3.8.7",
+    "@types/node": "^8.0.17",
+    "@types/winston": "2.3.4",
+    "class-transformer": "^0.1.7",
+    "class-transformer-validator": "^0.3.0",
+    "class-validator": "^0.7.2",
+    "config": "^1.26.1",
+    "hapi": "^16.5.0",
+    "immutable": "^3.8.1",
+    "injection-js": "^2.1.0",
+    "rxjs": "^5.4.2",
+    "winston": "^2.3.1"
+  },
+  "peerDependencies": {
+    "core-js": "^2.4.1"
+  },
+  "devDependencies": {
+    "@types/tape": "4.2.30",
+    "tape": "4.7.0",
+    "typescript": "2.4.2"
+  }
+}

@@ -1,0 +1,4 @@
+/src
+/dist/**/*.spec.js
+/dist/**/*.spec.d.ts
+/dist/**/*.spec.map
