@@ -1,10 +1,12 @@
-import { Injectable, Inject } from "injection-js";
-import { Config as LoggerConfig } from "winston";
+import { Injectable, Inject, Provider } from "injection-js";
+import { LoggerOptions } from "winston";
 
 import { HttpDelete, HttpGet, HttpPost, HttpPut } from "./server/decorators/method.decorator";
 import { Route } from "./server/decorators/route.decorator";
 import { Body } from "./server/decorators/body.decorator";
 import { addControllers } from "./server/addControllers";
+import { Request, Response } from "./server/route.model";
+import { Controller } from "./server/controller";
 import { IStartup } from "./IStartup";
 import { Logger } from "./Logger";
 import { Configuration } from "./Configuration";
@@ -13,19 +15,24 @@ import { Application } from "./Application";
 export {
 	IStartup,
 	Logger,
-	LoggerConfig,
+	LoggerOptions,
 	Configuration,
 	Application,
 
 	Route,
+	Body,
 	HttpGet,
 	HttpPost,
 	HttpDelete,
 	HttpPut,
-	Body,
 
+	Request,
+
+	Controller,
 	addControllers,
 
 	Inject,
-	Injectable
+	Injectable,
+	Provider
 };
+
